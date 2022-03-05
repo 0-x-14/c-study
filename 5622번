@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+	char a[16];
+	int i = 0, sum = 0;
+	while (1) {
+		a[i] = getchar();
+		if (a[i] == "\n") {
+			a[i] = NULL;
+			break;
+		}
+		if (a[i] <= 67)
+			a[i] = 2;
+		else if (a[i] <= 70)
+			a[i] = 3;
+		else if (a[i] <= 73)
+			a[i] = 4;
+		else if (a[i] <= 76)
+			a[i] = 5;
+		else if (a[i] <= 79)
+			a[i] = 6;
+		else if (a[i] <= 83)
+			a[i] = 7;
+		else if (a[i] <= 86)
+			a[i] = 8;
+		else
+			a[i] = 9;
+		sum += (a[i] + 1);
+		i++;
+	}
+	printf("%d\n", sum);
+}
